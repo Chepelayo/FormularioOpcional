@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollMain"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_degradado"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:id="@+id/ivImagen"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/icono_formulario"
+            android:src="@drawable/imagen"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_formulario"
+            android:textStyle="bold"
+            android:textColor="@color/color_primary"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@id/ivImagen"
+            app:layout_constraintBottom_toBottomOf="@id/ivImagen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivImagen"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginEnd="12dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardFormulario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/color_tarjeta"
+            app:layout_constraintTop_toBottomOf="@id/ivImagen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <ProgressBar
+                    android:id="@+id/pbProgreso"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="6dp"
+                    android:progressTint="@color/color_primary"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNombre"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/nombre"
+                    app:startIconDrawable="@drawable/ic_persona"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="30"
+                    app:layout_constraintTop_toBottomOf="@id/pbProgreso"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:maxLength="30" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilApellidos"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="@string/apellidos"
+                    app:startIconDrawable="@drawable/ic_apellidos"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="40"
+                    app:layout_constraintTop_toBottomOf="@id/tilNombre"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etApellidos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:maxLength="40" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tvSexo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/sexo"
+                    android:textColor="@color/color_texto_principal"
+                    app:layout_constraintTop_toBottomOf="@id/tilApellidos"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <RadioGroup
+                    android:id="@+id/rgSexo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="@id/tvSexo"
+                    app:layout_constraintBottom_toBottomOf="@id/tvSexo"
+                    app:layout_constraintStart_toEndOf="@id/tvSexo">
+                    <RadioButton
+                        android:id="@+id/rbHombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hombre" />
+
+                    <RadioButton
+                        android:id="@+id/rbMujer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/mujer" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tvAficiones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/aficiones"
+                    android:textColor="@color/color_texto_principal"
+                    app:layout_constraintTop_toBottomOf="@id/tvSexo"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/cbLectura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/lectura"
+                    app:layout_constraintTop_toBottomOf="@id/tvAficiones"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/cbDeporte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="@string/deporte"
+                    app:layout_constraintTop_toTopOf="@id/cbLectura"
+                    app:layout_constraintStart_toEndOf="@id/cbLectura" />
+
+                <CheckBox
+                    android:id="@+id/cbCerveza"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/cerveza"
+                    app:layout_constraintTop_toBottomOf="@id/cbLectura"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/cbCine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="@string/cine"
+                    app:layout_constraintTop_toTopOf="@id/cbCerveza"
+                    app:layout_constraintStart_toEndOf="@id/cbCerveza" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvUsarAnteriores"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/usar_datos_anteriores"
+            android:textColor="@color/color_accent"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/cardFormulario"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/limpiar"
+            android:textColor="@color/color_primary"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:strokeColor="@color/color_primary"
+            app:layout_constraintTop_toBottomOf="@id/tvUsarAnteriores"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnEnviar"
+            app:layout_constraintWidth_percent="0.42" />
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/boton_enviar"
+            app:backgroundTint="@null"
+            android:text="@string/enviar"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:elevation="6dp"
+            app:layout_constraintTop_toBottomOf="@id/tvUsarAnteriores"
+            app:layout_constraintStart_toEndOf="@id/btnLimpiar"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

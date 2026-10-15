@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado pulsado: un poco más oscuro -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="28dp" />
+            <gradient
+                android:angle="90"
+                android:startColor="#B71C1C"
+                android:endColor="#7F0000" />
+        </shape>
+    </item>
+
+    <!-- Estado normal: rojo con brillo arriba -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="28dp" />
+                <gradient
+                    android:angle="90"
+                    android:startColor="#F44336"
+                    android:centerColor="#D32F2F"
+                    android:endColor="#B71C1C" />
+        </shape>
+    </item>
+</selector>

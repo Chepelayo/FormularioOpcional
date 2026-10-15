@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Formulario</string>
+    <string name="icono_formulario">Icono del Formulario</string>
+    <string name="titulo_formulario">Por favor, rellene el formulario</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="sexo">Sexo:</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="aficiones">Aficiones:</string>
+    <string name="lectura">Lectura</string>
+    <string name="deporte">Deporte</string>
+    <string name="cerveza">Cerveza</string>
+    <string name="cine">Cine</string>
+    <string name="enviar">ENVIAR</string>
+
+    <string name="lecturaSalida">la lectura</string>
+    <string name="deporteSalida">el deporte</string>
+    <string name="cervezaSalida">beber cerveza</string>
+    <string name="cineSalida">el cine</string>
+
+    <string name="error_nombre">Debes introducir el nombre</string>
+    <string name="error_apellidos">Debes introducir los apellidos</string>
+    <string name="error_sexo">Debes seleccionar el sexo</string>
+
+    <string name="datos_introducidos">DATOS INTRODUCIDOS</string>
+    <string name="le_gusta">Le gusta:</string>
+    <string name="sin_aficiones">Nada en especial</string>
+
+    <string name="formato_nombre_completo">%1$s\n%2$s</string>
+
+    <!-- Fase II Opcional -->
+    <string name="limpiar">Limpiar</string>
+    <string name="confirmar_titulo">Confirmar datos</string>
+    <string name="confirmar_mensaje">¿Son correctos estos datos?\n\n%1$s %2$s\n%3$s\n\nLe gusta:\n%4$s</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="usar_datos_anteriores">Usar mis últimos datos</string>
+    <string name="compartir">Compartir</string>
+    <string name="compartir_titulo">Compartir mediante</string>
+
+</resources>

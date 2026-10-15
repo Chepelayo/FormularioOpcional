@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#D32F2F</color>
+    <color name="color_primary_dark">#B71C1C</color>
+    <color name="color_accent">#1976D2</color>
+    <color name="color_fondo_superior">#FFF3F3</color>
+    <color name="color_fondo_inferior">#FFFFFF</color>
+    <color name="color_tarjeta">#FFFFFF</color>
+    <color name="color_texto_principal">#212121</color>
+    <color name="color_texto_secundario">#757575</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#EF5350</color>
+    <color name="color_primary_dark">#FF8A80</color>
+    <color name="color_accent">#64B5F6</color>
+    <color name="color_fondo_superior">#2A1A1A</color>
+    <color name="color_fondo_inferior">#121212</color>
+    <color name="color_tarjeta">#1E1E1E</color>
+    <color name="color_texto_principal">#EEEEEE</color>
+    <color name="color_texto_secundario">#B0B0B0</color>
+</resources>
